@@ -42,7 +42,7 @@ function ToolsSettings({ isOpen, onClose }) {
   const [mcpServerTools, setMcpServerTools] = useState({});
   const [mcpToolsLoading, setMcpToolsLoading] = useState({});
   const [activeTab, setActiveTab] = useState('tools');
-  const [selectedModel, setSelectedModel] = useState('gemini-2.5-flash');
+  const [selectedModel, setSelectedModel] = useState('gemini-3.0-flash');
   const [enableNotificationSound, setEnableNotificationSound] = useState(false);
 
   // Common tool patterns
@@ -66,6 +66,8 @@ function ToolsSettings({ isOpen, onClose }) {
   
   // Available Gemini models (tested and verified)
   const availableModels = [
+    { value: 'gemini-3.0-flash', label: 'Gemini 3.0 Flash', description: 'Fast and efficient next generation model (Newest)' },
+    { value: 'gemini-3.0-pro', label: 'Gemini 3.0 Pro', description: 'Most advanced next generation model' },
     { value: 'gemini-2.5-flash', label: 'Gemini 2.5 Flash', description: 'Fast and efficient latest model (Recommended)' },
     { value: 'gemini-2.5-pro', label: 'Gemini 2.5 Pro', description: 'Most advanced model (Note: May have quota limits)' }
   ];
@@ -297,7 +299,7 @@ function ToolsSettings({ isOpen, onClose }) {
         setDisallowedTools(settings.disallowedTools || []);
         setSkipPermissions(settings.skipPermissions || false);
         setProjectSortOrder(settings.projectSortOrder || 'name');
-        setSelectedModel(settings.selectedModel || 'gemini-2.5-flash');
+        setSelectedModel(settings.selectedModel || 'gemini-3.0-flash');
         setEnableNotificationSound(settings.enableNotificationSound || false);
       } else {
         // Set defaults
