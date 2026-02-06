@@ -4,7 +4,8 @@
 
 ### 追加
 - Gemini 3.0 FlashおよびProモデルのサポート
-- モデル選択リストにGemini 3.0を追加
+- Gemini 3 Flash PreviewおよびPro Previewモデルのサポート
+- モデル選択リストにGemini 3.0およびPreview版を追加
 
 ### 変更
 - デフォルトモデルをgemini-3.0-flashに変更
